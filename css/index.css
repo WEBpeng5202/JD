@@ -2,7 +2,6 @@
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	
 }
 body{
 	min-width: 1190px;
@@ -77,6 +76,38 @@ img,input{
 	line-height: 30px;
 	float: left;
 	margin-left: 210px;
+    position: relative;
+}
+.map_slideDown{
+    width: 300px;
+    padding:10px;
+    background: #fff;
+    position: absolute;
+    top: 30px;
+    border: 1px solid #eee;
+    z-index: 99;
+    display: none;
+    overflow: hidden;
+}
+.map_city{
+    width: 60px;
+    padding:2px 0;
+    line-height: 24px;
+    text-align: left;
+    float: left;
+}
+.map_slideDown a{
+    display: block;
+    width: 40px;
+    color: #000;
+    text-align: center;
+}
+.map_slideDown a:hover{
+    color: #fff;
+    background: #f10215;
+}
+.map:hover .map_slideDown{
+    display: block;
 }
 .nav .content .map i{
 	font-size: 14px;
@@ -145,22 +176,54 @@ img,input{
 	width: 100%;
 	padding: 15px 0;
 	border-bottom: 1px solid #E7E7E7;
+    overflow: hidden;
 }
 .nav .content ul .f_last .ew_big div .tu1,.nav .content ul .f_last .ew_big div .tu2,.nav .content ul .f_last .ew_big div .tu3{
 	width: 76px;
 	height: 76px;
+    float: left;
+    margin-right: 10px;
 }
 
 .nav .content ul .f_last .ew_big .item img{
 	width: 74px;
 	height: 74px;
 	margin:0 5px;
-	float: left;
-	display: block;
+    border: 1px solid #CCC;
+    box-sizing: border-box;
+
 }
 .nav .content ul .f_last .ew_big .item a{
 	float: left;
 	display: block;
+    color: #666;
+    font-size: 12px;
+    font-weight: bold;
+    line-height:17px;
+}
+.nav .content ul .f_last .ew_big .item p{
+    float: left;
+    margin: 3px 0;
+    line-height: 14px;
+    color: #F10214;
+}
+.ico{
+    width:25px;
+    height:25px;
+    background: url("../img/sprite_mobile@1x.png") no-repeat 0 0;
+}
+.ico:nth-child(5){
+    background: url("../img/sprite_mobile@1x.png") no-repeat 0 -25px;
+}
+.ico:nth-child(6){
+    background: url("../img/sprite_mobile@1x.png") no-repeat 0 -50px;
+}
+.nav .content ul .f_last .ew_big .item span{
+    display: block;
+    float: left;
+    color: #F10214;
+    margin: 3px 0;
+    line-height:14px;
 }
 .nav .content ul .ew_k{
 	position: absolute;
@@ -374,6 +437,7 @@ img,input{
 	height: 448px;
 	background: yellow;
 	float: left;
+    position: relative;
 }
 .banner .left ul{
 	width: 100%;
@@ -386,6 +450,58 @@ img,input{
 	height: 28px;
 	line-height: 28px;
 	padding-left: 12px;
+}
+.cenav_item{
+    position: absolute;
+    top:0;
+    left: 190px;
+    width: 998px;
+    height: 499px;
+    background: #fff;
+    z-index: 99;
+    box-sizing: border-box;
+    padding-left: 20px;
+    display: none;
+}
+.cenav_title{
+    padding-top:10px;
+}
+.cenav_title a{
+    color: #fff;
+    background: #6e6568;
+    line-height:24px;
+    padding:5px 10px;
+    margin-right: 10px;
+}
+
+.cenav_con dl{
+    overflow: hidden;
+    padding:5px 0 0;
+}
+.cenav_con dt{
+    float: left;
+    font-weight: bold;
+    color: #666;
+    width: 70px;
+    text-align: right;
+    padding-right: 10px;
+}
+.cenav_con dd{
+    float: left;
+    line-height: 24px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+.cenav_con dd span{
+    border-left: 1px solid #eee;
+    padding:0 10px;
+    color: #333;
+}
+.cenav_item{
+    height:100%;
+}
+.active{
+    display: block;
 }
 .banner .left ul li:hover{
 	background: #999395;
