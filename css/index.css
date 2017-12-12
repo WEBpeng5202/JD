@@ -434,7 +434,7 @@ img,input{
 }
 .banner .left{
 	width: 190px;
-	height: 448px;
+	height: 480px;
 	background: yellow;
 	float: left;
     position: relative;
@@ -527,6 +527,77 @@ img,input{
 	left: 0;
 	margin-bottom: 10px;
 }
+.banner_content{
+	position: relative;
+	width: 100%;
+	height: 340px;
+	margin-bottom: 10px;
+}
+.banner_content:hover .banner_btn_left,.banner_content:hover .banner_btn_right{
+	display: block;
+}
+.banner_content .bannerImgBox{
+	width: 100%;
+	height: 340px;
+}
+.banner_content .bannerImg{
+	position: absolute;
+	top:0;
+	left:0;
+	opacity:0;
+	transition: 2s;
+	height: 100%;
+	width:100%;
+}
+.banner_content .imgActive{
+	opacity:1;
+}
+.banner_dot{
+	position: absolute;
+	bottom: 20px;
+	left:0;
+	right:0;
+	margin: 0 auto;
+	width: 160px;
+	height: 10px;
+}
+.banner_dot li{
+	float: left;
+	width: 10px;
+	height:10px;
+	margin: 0 5px;
+	background-color: #eee;
+	border-radius: 50%;
+}
+.banner_dot .banner_dot_active{
+	background-color: #c7254e;
+}
+.banner_btn_left i,.banner_btn_right i{
+	line-height: 60px;
+	text-align: center;
+	font-size: 30px;
+	color: #fff;
+}
+.banner_btn_left,.banner_btn_right{
+	position: absolute;
+	top:50%;
+	margin-top: -30px;
+	width: 30px;
+	height: 60px;
+	cursor: pointer;
+	background-color: rgba(14, 10, 30, 0.23);
+	display: none;
+}
+.banner_btn_left:hover,.banner_btn_right:hover{
+	background-color: rgba(14, 10, 30, 0.65);
+}
+.banner_btn_left{
+	left: 5px;
+}
+.banner_btn_right{
+	right: 5px;
+}
+
 .banner .content .lb_banner ul{
 	width: 800%;
 	overflow: hidden;
@@ -545,6 +616,7 @@ img,input{
 	border-radius: 12px;
 	background: hsla(0,0%,100%,.3);
 	width: 182px;
+
 }
 .banner .content .lb_banner .dot ul{
 	padding: 4px 8px;
@@ -646,22 +718,34 @@ img,input{
 	padding: 0 15px;
 	height: 154px;
 	border-bottom: 1px solid #e6e6e6;
+	position: relative;
 }
 .banner .right .new .top{
 	padding: 8px 0 4px 0;
 	width: 160px;
 	height: 14px;
 	line-height: 14px;
-	border-bottom: 1px solid #e6e6e6;
 	position: relative;
 	left: 0;
 	top: 0;
+}
+.banner .right .new .top .dot{
+	position: absolute;
+	bottom: -2px;
+	left: 10px;
+	transition: all .5s;
+}
+.banner .right .new .top ul{
+	overflow: hidden;
+}
+.banner .right .new .top ul li{
+	float: left;
 }
 .banner .right .new .top a{
 	color: #666;
 }
 .banner .right .new .top a:nth-child(1){
-	padding-right: 12px;
+	padding:0 12px;
 	border-right: 1px solid #ccc;
 }
 .banner .right .new .top a:nth-child(2){
@@ -678,19 +762,30 @@ img,input{
 	width: 160px;
 	height: 96px;
 	padding: 12px 0;
+	position: absolute;
+	top:26px;
+	left: 20px;
+	background-color: #fff;
 }
 .banner .right .new .con ul li{
 	height: 24px;
+	white-space:nowrap;
+	text-overflow:ellipsis;
 }
 .banner .right .new .con ul li a{
 	color: #666;
+	display: block;
+	width:100%;
+	overflow: hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
 }
 .banner .right .new .con ul li a:hover{
 	color: #c81623;
 }
 .banner .right .new .top .focus{
 	width: 28px;
-	height: 2px;
+	height: 4px;
 	background: #db192b;
 	margin-top: 3px;
 }
@@ -887,6 +982,18 @@ img,input{
 	width: 1000px;
 	height: 225px;
 	float: left;
+	overflow: hidden;
+	position: relative;
+}
+.JS_conlBox{
+	width: 400%;
+	overflow: hidden;
+	transition: all 3s;
+}
+.JDMS .JS_content .JS_conl ul{
+	overflow: hidden;
+	float: left;
+
 }
 .JDMS .JS_content .JS_conl ul li{
 	width: 170px;
@@ -896,8 +1003,30 @@ img,input{
 	float: left;
 	padding: 0 14px 0 15px;
 }
-.JDMS .JS_content .JS_conl ul li:last-child{
-	border: none;
+.JDMS .JS_content .JS_conl:hover .JS_btn{
+	display: block;
+}
+.JS_btn{
+	position: absolute;
+	top: 50%;
+	margin-top: -25px;
+	width: 20px;
+	height: 50px;
+	background-color: rgba(0,0,0,.1);
+	color: #272526;
+	text-align: center;
+	line-height: 50px;
+	display: none;
+	cursor: pointer;
+}
+.JS_btn i{
+	font-size: 20px;
+}
+.JS_btnl{
+	left: 0;
+}
+.JS_btnr{
+	right:0;
 }
 .JDMS .JS_content .JS_conl ul li{
 	position: relative;
@@ -967,12 +1096,22 @@ img,input{
 	overflow: hidden;
 	position: relative;
 }
-.JDMS .JS_content .JS_conr ul{
+.JDMS .JS_content .JS_conr .JS_conrImg{
 	overflow: hidden;
+	width: 200%;
+	height:100%;
+	position: relative;
 }
-.JDMS .JS_content .JS_conr ul li{
-	float: left;
-	width: 100%;
+.JDMS .JS_content .JS_conr .JS_conrImg li{
+	position: absolute;
+	top:0;
+	left:0;
+	width: 50%;
+	opacity:0;
+	transition: 1s;
+}
+.JDMS .JS_content .JS_conr ul .JS_conr_active{
+	opacity: 1;
 }
 .JDMS .JS_content .JS_conr .dot{
 	float: left;
@@ -989,6 +1128,7 @@ img,input{
 	border-radius: 10px;
 	background: #fff;
 	margin: 0 3px;
+	float: left;
 }
 .JDMS .JS_content .JS_conr .dot .active{
 	background: #e01222;
@@ -1192,14 +1332,19 @@ img,input{
 	top: 0;
 	left: 0;
 }
-.find .item:nth-child(2) .contents ul{
-	position: relative;
+.find .item:nth-child(2) .contents .bannerImg{
+	position: absolute;
 	left: 0;
 	top: 0;
 	width: 100%;
 	height: 100%;
+	opacity: 0;
+	transition: all 1s;
 }
-.find .item:nth-child(2) .contents ul li{
+.find .item:nth-child(2) .contents .imgActive{
+	opacity: 1;
+}
+.find .item:nth-child(2) .contents .bannerImg li{
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -1234,15 +1379,10 @@ img,input{
 	height: 110px;
 	margin:  0 5px;
 }
-.find .item:nth-child(2) .contents>div{
-	position: absolute;
-	bottom: 20px;
-	left: 170px;
-	width: 50px;
-	height: 10px;
-	display: flex;
-	justify-content: space-around;
+.find .item:nth-child(2) .banner_dot{
+	width: 60px;
 }
+
 .find .item:nth-child(2) .contents>div>div{
 	width: 8px;
 	height: 8px;
@@ -1252,24 +1392,24 @@ img,input{
 .find .item:nth-child(2) .contents>div .active{
 	background: #e01222;
 }
-.find .item:nth-child(2) .contents>a{
+.find .item:nth-child(2) .contents>.btn{
 	position: absolute;
 	width: 20px;
-	height: 50px;
+	height: 60px;
 	background: #f3f2f3;
 	text-align: center;
-	line-height: 50px;
+	line-height: 60px;
 	top: 50%;
-	margin-top: -25px;
+	margin-top: -30px;
 	display: none;
 }
 .find .item:nth-child(2) .contents:hover .btn{
 	display: block;
 }
-.find .item:nth-child(2) .contents> .btn_l{
+.find .item:nth-child(2) .contents> .banner_btn_left{
 	left: 0;
 }
-.find .item:nth-child(2) .contents> .btn_right{
+.find .item:nth-child(2) .contents> .banner_btn_right{
 	right: 0;
 }
 .find .item:nth-child(3) .title{
@@ -1305,6 +1445,7 @@ img,input{
 	position: absolute;
 	bottom: 0;
 	left: 10px;
+	transition: all .5s;
 }
 .find .item:nth-child(3) .tab ul li{
 	border-right: 1px solid #efefef;
@@ -1356,7 +1497,7 @@ img,input{
 	text-align: center;
 	color: #fff;
 }
-.find .item:nth-child(3) .con ul :nth-child(1)li a div{
+.find .item:nth-child(3) .con ul li:nth-child(1) a div{
 	background: url(../img/sprite_index@1x.png) no-repeat -104px -40px;
 }
 .find .item:nth-child(3) .con ul li:nth-child(2) a div{
@@ -1561,11 +1702,27 @@ img,input{
 	left: 0;
 	top: 0;
 }
+.lj .lj_right .con .bannerImg{
+	opacity: 0;
+	transition: all 1s;
+}
+.lj .lj_right .con .imgActive{
+	opacity:1;
+}
+.lj .lj_right .con .banner_dot{
+	width: 100px;
+}
 .lj .lj_right .con ul:first-child{
 	width: 390px;
 	height: 215px;
 	background: #fff;
 	overflow: hidden;
+}
+.lj .lj_right .con ul:first-child li{
+	position: absolute;
+	left:0;
+	top:0;
+	width: 100%;
 }
 .lj .lj_right .con ul:first-child li a{
 	display: block;
@@ -1594,7 +1751,7 @@ img,input{
 }
 .lj .lj_right .con ul:first-child li a span:nth-child(3) i{
 	font-style: normal;
-	color: blue;
+	color: #4f629f;
 }
 .lj .lj_right .con ul:first-child li a span:nth-child(4){
 	display: block;
@@ -1646,6 +1803,9 @@ img,input{
 }
 .lj .lj_right .con .btn_right{
 	right: 0;
+}
+.lj .lj_right .con:hover .btn{
+	display: block;
 }
 .lj .lj_right .con ul li:hover{
 
@@ -1973,16 +2133,19 @@ img,input{
 }
 .life .con .life_item .life_item_t .code .code_large{
 	position: absolute;
-	top: 40px;
-	left: -30px;
+	top: 38px;
+	left: -40px;
 	z-index: 50;
 	width: 103px;
 	height: 121px;
 	background: #fff;
+	border:1px solid #c187af;
 }
 .life .con .life_item .life_item_t .code .code_large img{
 	display: block;
 	margin: 10px auto;
+	width: 80px;
+	height: 80px;
 }
 .life .con .life_item .life_item_t .code .code_large p{
 	text-align: center;
@@ -2136,7 +2299,7 @@ img,input{
 	line-height: 26px;
 }
 .life_large .life_item_t .code{
-	margin-left: -350px;
+	margin-left: -300px;
 	margin-top: 4px;
 }
 .life_large .life_item_t .code .code_img{
@@ -2581,18 +2744,18 @@ footer  .footer_con_b .footer_last a:nth-child(6){
 	border-color: transparent transparent #fff;
 	margin: 0 auto;
 }
-.wrap .lc ul li a{
-	display: block;
+.wrap .lc ul li{
 	padding: 7px 5px;
 	color: #fff;
 	background: #918888;
 	border-bottom: 1px solid #fff;
+	cursor: pointer;
 }
-.wrap .lc ul li a:hover{
+.wrap .lc ul li:hover{
 	background: #d70b1c;
 	border-bottom: 1px solid #d70b1c;
 }
-.wrap .lc ul li:last-child a{
+.wrap .lc ul li:last-child{
 	background: #5e4a4a;
 }
 .wrap .rc{
